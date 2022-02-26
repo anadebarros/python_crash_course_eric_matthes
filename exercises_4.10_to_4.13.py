@@ -35,3 +35,17 @@ friends_food.append("ice cream")
 
 for food in friends_food:
   print(food)
+
+#4.13
+foods = ("olives", "fish", "carrots", "tangerines", "cookies")
+
+for food in foods:
+  print(food)
+
+#creates error
+foods[0] = "meat"
+
+foods = ("meat", "beetroots", "carrots", "tangerines", "cookies")
+
+for food in foods:
+  print(food)
