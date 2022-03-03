@@ -72,3 +72,54 @@ while value:
   else:
     print("You'll need money!")
     value = False
+
+#7.8
+sandwich_orders =["pastrami","tuna","cheese","pastrami"]
+
+finished_sandwiches = []
+
+while sandwich_orders:
+  made_sandwhich = sandwich_orders.pop()
+  finished_sandwiches.append(made_sandwhich)
+  finished_sandwiches.sort()
+  number_of_sandwiches = len(finished_sandwiches)
+    
+print(f"A total of {number_of_sandwiches} sandwhiches were made:")
+print("These included:")
+
+for sandwich in finished_sandwiches:
+  print(f"{sandwich}\t")
+
+#7.9
+print("The deli has run out of pastrami")
+
+sandwich_orders1 =["pastrami","tuna", "pastrami","cheese","pastrami"]
+finished_sandwiches1 = []
+
+while "pastrami" in sandwich_orders1:
+  sandwich_orders1.remove("pastrami")
+
+while sandwich_orders1:
+  made_sandwhich1 = sandwich_orders1.pop()
+  finished_sandwiches1.append(made_sandwhich1)
+
+print("The following sandwiches were made:")
+for sandwich in finished_sandwiches1:
+  print(f"{sandwich}\t")
+
+#7.10
+responses = {}
+questionnaire = True
+
+while questionnaire:
+  name = input("What is your name? ")
+  place = input("If you could visit one place in the world, where would you go? ")
+  responses[name] = place
+
+  repeat = input("Would someone else like to take answer the questionnaire? yes/no ")
+  if repeat.lower() == "yes":
+    continue
+  else:
+   questionnaire = False 
+
+print(responses)
