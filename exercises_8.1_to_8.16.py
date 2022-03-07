@@ -91,3 +91,80 @@ while True:
     if album_tracks == "q".lower():
         break
     print(make_album(album_artist, album_title, album_tracks))
+
+
+# 8.9
+magician_names = ["Houdini", "Copperfield", "Luís de Matos"]
+
+
+def show_magicians(magicians):
+    for magician in magicians:
+        print(magician)
+
+
+show_magicians(magician_names)
+
+
+# 8.10
+def make_great(great_magicians):
+    for magician in range(len(great_magicians)):
+        great_magicians[magician] += " the great"
+
+
+make_great(magician_names)
+
+show_magicians(magician_names)
+
+
+# 8.11
+def make_great(great_magicians):
+    for magician in range(len(great_magicians)):
+        great_magicians[magician] += " the great"
+    return great_magicians
+
+
+great_magicians = make_great(magician_names[:])
+
+show_magicians(great_magicians)
+show_magicians(magician_names)
+
+# 8.12
+
+
+def making_sandwiches(*ingredients):
+    print("Your sandwich contains:\n")
+    for ingredient in ingredients:
+        print(f"- {ingredient}\n")
+
+
+making_sandwiches("pepers", "tuna", "eggs")
+making_sandwiches("peperoni", "tomato")
+
+
+# 8.13
+def build_profile(first, last, **user_info):
+    profile = {}
+    profile['first name'] = first.title()
+    profile['last name'] = last.title()
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
+
+
+user_profile = build_profile(
+    'ana', 'de Barros', height=1.64, hair="brown", eyes="brownish green")
+print(user_profile)
+
+
+# 8.14
+def car_info(brand, model, **info):
+    car = {}
+    car['brand'] = brand
+    car['model'] = model
+    for key, value in info.items():
+        car[key] = value
+    return car
+
+
+new_car = car_info('toyota', 'x3', fuel='gasoline', color='white')
+print(new_car)
