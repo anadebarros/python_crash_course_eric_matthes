@@ -60,3 +60,69 @@ user3 = User(input(), "banana", 38, sports=True, reading=False)
 print(user1.describe_user(), user1.greet_user())
 print(user2.describe_user(), user2.greet_user())
 print(user3.describe_user(), user3.greet_user())
+
+
+9.4
+
+
+class Restaurant():
+
+    status = "open"
+
+    def __init__(self, name, cuisine_type):
+        self.name = name
+        self.cuisine_type = cuisine_type
+        self.number_served = 0
+
+    def describe_restaurant(self):
+        print(
+            f"This restaurant is called {self.name} and"
+            "it cooks {self.cuisine_type} food")
+
+    def open_restaurant(self):
+        print(f"This restaurant is {self.status}")
+
+    def set_number_served(self, number):
+        self.number_served += number
+
+
+restaurant = Restaurant('chimkens', 'grill')
+print(restaurant.number_served)
+
+restaurant.number_served = 15
+print(restaurant.number_served)
+
+restaurant.set_number_served(30)
+
+print(restaurant.number_served)
+
+9.5
+
+
+class User():
+
+    def __init__(self, first_name, last_name, age):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.login_attempts = 0
+
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
+
+user1 = User('Ana', 'Barros', 38)
+
+user1.increment_login_attempts()
+user1.increment_login_attempts()
+user1.increment_login_attempts()
+user1.increment_login_attempts()
+
+print(user1.login_attempts)
+
+user1.reset_login_attempts()
+
+print(user1.login_attempts)
