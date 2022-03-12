@@ -45,9 +45,10 @@ class User():
     def describe_user(self):
 
         print(
-            f"My first name is {self.first_name} and my last name"
-            "is {self.last_name}. I'm {self.age} years old"
-            "and I like {self.interests}")
+            f"My first name is {self.first_name} "
+            f"and my last name is {self.last_name}."
+            f"I'm {self.age} years old and I like {self.interests}"
+        )
 
     def greet_user(self):
         print(f"Hi {self.first_name}! Welcome!")
@@ -141,8 +142,9 @@ class Restaurant():
 
     def describe_restaurant(self):
         print(
-            f"This restaurant is called {self.name} and"
-            "it cooks {self.cuisine_type} food")
+            f"This restaurant is called {self.name}"
+            f" and it cooks {self.cuisine_type} food"
+        )
 
     def open_restaurant(self):
         print(f"This restaurant is {self.status}")
